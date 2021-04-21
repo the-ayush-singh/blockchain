@@ -1,0 +1,22 @@
+{
+  "name": "block-chain",
+  "version": "1.0.0",
+  "description": "Blockchain Beigining",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/the-ayush-singh/blockchain.git"
+  },
+  "author": "Ayush Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-ayush-singh/blockchain/issues"
+  },
+  "homepage": "https://github.com/the-ayush-singh/blockchain#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
