@@ -4,7 +4,7 @@
   "description": "Blockchain Beigining",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
     "dev-test": "modemon dev-test"
   },
   "repository": {
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/the-ayush-singh/blockchain#readme",
   "dependencies": {
     "crypto-js": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
   }
 }
