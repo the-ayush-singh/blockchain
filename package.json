@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/the-ayush-singh/blockchain/issues"
   },
-  "homepage": "https://github.com/the-ayush-singh/blockchain#readme"
+  "homepage": "https://github.com/the-ayush-singh/blockchain#readme",
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  }
 }
