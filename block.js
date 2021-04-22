@@ -12,6 +12,9 @@ class Block{
             Hash     :${this.hash}
             Data     :${this.data}`;
     }
+    static genesis() {
+        return new this('Genesis Time', '----------', 'fX4d4h5s3', 'Genesis');
+    }
 }
 // ====================================Testing ===============================
 // const bl = new Block('1234567890', '1234567890','1234567890', '1234567890');
