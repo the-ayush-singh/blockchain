@@ -18,3 +18,7 @@ Node Js Programming Lanuage is used here.
 Here NodeMon is used to Leverage auto run facility
 
 <img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/tests.png" alt="Testing Validation Function">
+
+## Creating and Testing APIs using POSTMAN
+
+<img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/postman.png?raw=true" alt="Postman">
