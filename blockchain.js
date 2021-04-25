@@ -29,9 +29,25 @@ class Blockchain {
           }
         }
         return true;
-      }
-      // WARNING : CALL CORRECT PROPERTIES OF THE OBJECTS :) ELSE YOU'LL CRY :(
-
+    }
+    // WARNING : CALL CORRECT PROPERTIES OF THE OBJECTS :) ELSE YOU'LL CRY :(
+    
+    // Making Blockchain Ready for accepting other chains from different sources.
+    replaceChain(newChain){
+        //Newer Chain should be longer than the current one.
+        if (newChain.length <= this.chain.length){
+            console.log('This is shorter than current Chain');
+            return;
+        }
+        //It should be a valid chain.
+        else if(!this.isValidChain(newChain)){
+            console.log('This is an invalid chain');
+            return;
+        }
+        //If above Both conditions are satisfied then we can replace the current chain with a new one.
+        console.log('Replacing the block chain with new chain');
+        this.chain = newChain;
+    }
 }
 
 module.exports = Blockchain;
