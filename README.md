@@ -22,3 +22,11 @@ Here NodeMon is used to Leverage auto run facility
 ## Creating and Testing APIs using POSTMAN
 
 <img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/postman.png?raw=true" alt="Postman">
+
+## Linked various peers through websocket and SYNC the Blockchain
+
+<img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/sync-test.png?raw=true" alt="Peers connection display in Terminal">
+
+## Creating BLOCKS using postman and Syncing it through WebSocket
+
+<img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/postman2.png?raw=true" alt="Postman generating POST Requests(Blocks)">
