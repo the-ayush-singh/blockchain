@@ -45,7 +45,7 @@ class Blockchain {
             return;
         }
         //If above Both conditions are satisfied then we can replace the current chain with a new one.
-        console.log('Replacing the block chain with new chain');
+        console.log('Replacing the blockchain with Newer Chain');
         this.chain = newChain;
     }
 }
