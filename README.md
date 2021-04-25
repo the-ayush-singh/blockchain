@@ -10,4 +10,11 @@
 ### It utilizes Basic JS concepts(OOPs, Arrow Functions, Modules,etc..) arranged in a logical way.
 Node Js Programming Lanuage is used here.
 
+## Here we're generating Blocks with their unique Hashes using (SHA 256)
+
 <img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/Screenshot%20.png" alt="Testing the Hash Function">
+
+## Testing all the commits(like Blockchain Validation, Mining function, etc)! Just to be On safe Sides 😀
+Here NodeMon is used to Leverage auto run facility
+
+<img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/tests.png" alt="Testing Validation Function">
