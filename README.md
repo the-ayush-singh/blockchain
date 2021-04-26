@@ -30,3 +30,19 @@ Here NodeMon is used to Leverage auto run facility
 ## Creating BLOCKS using postman and Syncing it through WebSocket
 
 <img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/postman2.png?raw=true" alt="Postman generating POST Requests(Blocks)">
+
+# PROOF OF WORK
+
+## Adding difficulty to the Blockchain so that it cannot be exploited. 
+### We can see that at DIFFICULTY = 4 there are four zeros in the beginning of the Hash
+With  DIFFICULTY = 4 the time taken to generate the block is about 4 sec.
+
+<img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/DIFFICULTY4.png?raw=true" alt="DIFFICULTY AT 4">
+
+## With DIFFICULTY = 5 there are five (0)s in the begining of the Hash and Time taken to generate the Block is about 47s.
+
+Therefore we can observe that time increases exponentially as difficulty increases, therefore DIFFICULTY helps the Blockchain to prevent its exploitation! As more and more resource of the MINER will be utilised for mining the chain. Therefore if someone wants to replace the whole chain they will need about 51% power of the total Blockchain system and even after doing so it won't be worth it.
+
+
+<img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/DIFFICULTY5.png?raw=true" alt="DIFFICULTY AT 5">
+
