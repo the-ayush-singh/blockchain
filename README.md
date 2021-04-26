@@ -46,3 +46,7 @@ Therefore we can observe that time increases exponentially as difficulty increas
 
 <img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/DIFFICULTY5.png?raw=true" alt="DIFFICULTY AT 5">
 
+## Generating a Blockchain with Dynamic DIFFICULTY
+Here difficulty is varying according to the time taken by previous Block production.
+
+<img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/BLOCKCHAIN6.png?raw=true" alt="Blocks with Dynamic DIFFICULTY">
