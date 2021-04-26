@@ -1,52 +1,63 @@
 const SHA256 = require('crypto-js/sha256');
-const { DIFFICULTY } = require('../config');
+const { DIFFICULTY, MINE_RATE } = require('../config');
 
 
 class Block{
-    constructor(timestamp, lastHash, hash, data, nonce){
+    constructor(timestamp, lastHash, hash, data, nonce, difficulty){
         this.timestamp = timestamp;
         this.lastHash =lastHash;
         this.hash = hash;
         this.data =data;
         this.nonce = nonce;
+        this.difficulty = difficulty || DIFFICULTY;
     }
     // It helps us to see Block Details
     toString () {
         return `Block - 
-            Timestamp: ${this.timestamp}
-            Last Hash: ${this.lastHash}
-            Hash     : ${this.hash}
-            Nonce    : ${this.nonce} 
-            Data     : ${this.data}`;
-    }
+            Timestamp  : ${this.timestamp}
+            Last Hash  : ${this.lastHash}
+            Hash       : ${this.hash}
+            Nonce      : ${this.nonce}
+            Difficulty : ${this.difficulty}
+            Data       : ${this.data}`;
+    } 
     // The first Block with predefined Values
     static genesis() {
-        return new this('Genesis Time', '----------', 'fX4d4h5s3', 'Genesis', 0);
+        return new this('Genesis Time', '----------', 'fX4d4h5s3', 'Genesis', 0, DIFFICULTY);
     }
     //Generating a Block
     static mineBlock(lastBlock, data){
         let hash, timestamp;
         let nonce = 0; //Nance Value #Proof of Work
         const lastHash = lastBlock.hash;
+        let { difficulty } = lastBlock;
         
         do{
             nonce++; 
             timestamp = Date.now();
-            hash = Block.hash(timestamp, lastHash, data,nonce);
-        } while (hash.substring(0,DIFFICULTY) !== '0'.repeat(DIFFICULTY));// Verifing 0s in Hash begining #proof of work
+            difficulty = Block.adjustDifficulty(lastBlock, timestamp );//Manipulating DIFFICULTY
+            hash = Block.hash(timestamp, lastHash, data, nonce, difficulty);
+        } while (hash.substring(0,difficulty) !== '0'.repeat(difficulty));// Verifing 0s in Hash begining #proof of work
 
 
-        return new this(timestamp, lastHash, hash, data, nonce);
+        return new this(timestamp, lastHash, hash, data, nonce, difficulty);
 
     }
     //This helps us to generate a Hash
-    static hash(timestamp, lastHash, data, nonce) {
-        return SHA256(`${timestamp}${lastHash}${data}${nonce}`).toString();
+    static hash(timestamp, lastHash, data, nonce, difficulty) {
+        return SHA256(`${timestamp}${lastHash}${data}${nonce}${difficulty}`).toString();
     }
     // It will help us to regenerate a block and thus we can verify that is its hash, correct or not! :)
     static blockHash(block){
-        const {timestamp, lastHash, data, nonce} = block;
-        return Block.hash(timestamp, lastHash, data, nonce);
+        const {timestamp, lastHash, data, nonce, difficulty} = block;
+        return Block.hash(timestamp, lastHash, data, nonce, difficulty);
+    }
+    static adjustDifficulty(lastBlock, currentTime){
+        let{ difficulty } = lastBlock; //ES6 way of defining a property
+        difficulty = lastBlock.timestamp + MINE_RATE > currentTime ? difficulty + 1 : difficulty - 1;
+        //If difference exceeds MINE_RATE then reducing DIFFICULTY AND VICE-VERSA
+        return difficulty;
+
     }
 }
 // ====================================Testing ===============================
