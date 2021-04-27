@@ -50,3 +50,7 @@ Therefore we can observe that time increases exponentially as difficulty increas
 Here difficulty is varying according to the time taken by previous Block production.
 
 <img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/BLOCKCHAIN6.png?raw=true" alt="Blocks with Dynamic DIFFICULTY">
+
+# Creating Crypto Wallets
+## COMING SOON
+<img src="https://blog.bitnovo.com/wp-content/uploads/2019/04/que-es-wallet-bitcoins-criptomonedas.jpg" alt="Wallet">
