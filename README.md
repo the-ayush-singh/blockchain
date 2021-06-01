@@ -52,5 +52,12 @@ Here difficulty is varying according to the time taken by previous Block product
 <img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/BLOCKCHAIN6.png?raw=true" alt="Blocks with Dynamic DIFFICULTY">
 
 # Creating Crypto Wallets
-## COMING SOON
+Wallets are used to store blocks/cryptocurrencies. It helps users to protect, authenticate as well as transact their Cryptos/Blocks.
 <img src="https://blog.bitnovo.com/wp-content/uploads/2019/04/que-es-wallet-bitcoins-criptomonedas.jpg" alt="Wallet">
+
+## Transactions
+Transaction contain a unique ID, address of the sender's and the recipient's wallet, amount to be transferred.
+
+Transaction object is divided into two parts - Input and Output.
+
+<img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/Transaction_test.png?raw=true" alt="Transaction Tests">
