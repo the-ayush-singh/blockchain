@@ -1,7 +1,4 @@
-const Blockchain = require("./blockchain")
+const Wallet = require('./wallet');
+const wallet = new Wallet();
 
-const bc = new Blockchain();
-
-for (let i=0; i<6; i++){
-    console.log(bc.addBlock(`Block ${i}`).toString());
-}// Generating Blockchain consisting of 6 blocks 
+console.log(wallet.toString());
