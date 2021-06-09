@@ -32,6 +32,7 @@ describe('Transaction',()=>{
         expect(Transaction.verifyTransaction(transactions)).toBe(true);
         console.log('This is a valid Transaction');
     });
+
     it ('invalidates a corrupt input transaction', ()=>{
         transactions.output[0] = 3;
         expect(Transaction.verifyTransaction(transactions)).toBe(false);
@@ -49,6 +50,25 @@ describe('Transaction',()=>{
         });
     });
 
+    describe('Updating a Transaction',()=>{
+        let nextAmount, nextRecepient;
 
+        beforeEach(()=>{
+            nextAmount = 21;
+            nextRecepient = 'aise-he-kuchh-likh-diya';
+            transactions = transactions.update(wallet, nextRecepient, nextAmount);
+        });
+
+        it ('Subtracts the next amount from the sender\'s output', ()=>{
+            expect(transactions.output.find(output=> output.address == wallet.publicKey).amount)
+            .toEqual(wallet.balance - amount - nextAmount);
+            console.log('Transaction Updated Successfully');
+        });
+
+        it ('Outputs an amount for the next recepient', ()=>{
+            expect(transactions.output.find(output=> output.address == nextRecepient).amount)
+            .toEqual(nextAmount);
+        });
+    });
 
 });
