@@ -23,6 +23,11 @@ describe('Transaction',()=>{
         console.log('Amount Recieved');
     });
 
+    it ('inputs the balance of the wallet',()=>{
+        expect(transactions.input.amount).toEqual(wallet.balance);
+        //if passes means input obj. has been created.
+    });
+
     describe('transacting with an amount that exceeds the balance', () => {
         beforeEach(() => {
           amount = 50000;
@@ -33,6 +38,7 @@ describe('Transaction',()=>{
           expect(transaction).toEqual(undefined);
         });
     });
-    
+
+
 
 });
