@@ -28,6 +28,16 @@ describe('Transaction',()=>{
         //if passes means input obj. has been created.
     });
 
+    it ('validates a input transaction', ()=>{
+        expect(Transaction.verifyTransaction(transactions)).toBe(true);
+        console.log('This is a valid Transaction');
+    });
+    it ('invalidates a corrupt input transaction', ()=>{
+        transactions.output[0] = 3;
+        expect(Transaction.verifyTransaction(transactions)).toBe(false);
+        console.log('This is an invalid Transaction');
+    });
+
     describe('transacting with an amount that exceeds the balance', () => {
         beforeEach(() => {
           amount = 50000;
