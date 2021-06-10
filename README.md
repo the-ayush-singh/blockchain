@@ -61,3 +61,9 @@ Transaction contain a unique ID, address of the sender's and the recipient's wal
 Transaction object is divided into two parts - Input and Output.
 
 <img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/Transaction_test.png?raw=true" alt="Transaction Tests">
+
+## Verifying Transactions
+We can verify the incoming transaction using SHA256 and keyFromPublic() function in JavaScript imported from <b>ec</b> module.
+
+<img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/verification.png?raw=true" alt="Transaction Verification test">
+
