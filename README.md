@@ -67,3 +67,8 @@ We can verify the incoming transaction using SHA256 and keyFromPublic() function
 
 <img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/verification.png?raw=true" alt="Transaction Verification test">
 
+## Updating Transactions
+To make transaction object more efficient and optimised we can update it, if transaction is being made to the same user multiple times.
+
+<img src="https://github.com/the-ayush-singh/blockchain/blob/main/images/updation.png?raw=true" alt="Updation Verification test">
+
